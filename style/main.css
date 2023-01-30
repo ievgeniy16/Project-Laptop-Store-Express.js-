@@ -1,0 +1,21 @@
+/* Home page */
+@import "./head_food.css";
+@import "./homePage.css";
+
+ /* Cart page */
+@import "./cart.css";
+
+/* Login page */
+@import "./login.css";
+/* Register page */ 
+@import "./register.css";
+/* About page  */
+@import "./about.css";
+/* Catalog page */
+@import "./catalog.css";
+/* Details page  */
+@import "./details.css";
+/* Create page */
+@import "./create.css";
+/* Page Not Found  */
+@import "./pageNotFound.css";

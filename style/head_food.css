@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    background-color: darkslateblue;
+    height: 160px;
+    width: auto;
+    min-width: 1100px;
+    margin: 0 auto;
+}
+.logo {
+    width: 1000px;
+    height: 80px;
+    margin: 0 auto;
+}
+.logo h1 {
+    margin-left: 10px;
+    padding-top: 20px;
+
+    float: left;
+}
+.logo h1 a {
+    font-family: 'century gothic', arial, sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #fff;
+
+    border: 1px dashed white;
+    border-width: 2px;
+    padding-left: 3px;
+    padding-bottom: 3px;
+}
+.logo .greeting {
+    float: right;
+    /* white-space: nowrap; */
+}
+.greeting p {
+    margin-top: 36px;
+    margin-top: 48px;
+    font-family: "Brush Script MT", cursive;
+    font-family: 'century gothic', arial, sans-serif;
+
+    font-size: 16px;
+    font-weight: 500;
+    float: left;
+    color: black;
+}
+.greeting img {
+    width: 45px;
+    height: 45px;
+    margin-top: 25px;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>> HEADER menu_header <<<<<<<<<<<<<<<<<<<<<<<<<< */
+.menu_header {
+    width: 1000px;
+    height: 80px;
+    margin: 0 auto;
+    /* float: left; */
+}
+.menu_header ul li {
+    list-style: none;
+    float: left;
+    height: 80px;
+}
+.menu_header ul li a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Sofia", sans-serif;
+    font-family: "Brush Script MT", cursive;
+    font-family: 'century gothic', arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin-right: 30px;
+
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.menu_header ul li:first-child {
+    margin-left: 70px;
+    /* margin-left: 10px; */
+}
+.menu_header ul li a:hover {
+    transition: all .5s ease;
+    color: black;
+}
+
+.addcart {
+    float: right;
+    height: 80px;
+    width: 60px;
+}
+.addcart a {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 35px;
+}
+.addcart a img {
+    width: 100%;
+}
+.counter {
+    position: absolute;
+    border-radius: 50px;
+    background-color: #fdb511;
+    margin-left: 12px;
+    margin-top: 12px;
+    font-family: monospace;
+}
+.counter span {
+    font-size: 20px;
+    padding: 0 6px;
+}
+
+
+
+
+
+
+
+/*--------------------- ВЫПАДАЮЩЕЕ МЕНЮ  DROP DOWN -------------------------------- */
+.menu_header .visible_menu .sub_menu ul li {
+    height: auto;
+}
+.visible_menu {
+    width: 140px;
+    margin-top: 80px;
+    margin-left: 237px;
+    background-color: black;
+    opacity: 0.9;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    height: auto;
+}
+/* .sub_menu {
+    width: 140px;
+} */
+.sub_menu ul li {
+    float: none;
+    list-style: none;
+    text-align: center;
+    /* margin-bottom: 10px; */
+    width: 100%;
+}
+.sub_menu ul li:first-child {
+    margin-top: 10px;
+}
+.sub_menu ul li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-family: URW Chancery L, cursive;
+    letter-spacing: 0.1em;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 5px;
+}
+.sub_menu ul li a:hover {
+    color: #470aee;
+}
+/* стрелки arrows */
+.down,
+.up {
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>  FOOTER  <<<<<<<<<<<<<<<<<<<<<<<<< */
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: darkslateblue;
+}
+
+.footer_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_top a {
+    text-decoration: none;
+    color: #aabb67;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 15px;
+    cursor: pointer;
+    text-shadow: 1px 1px #e7ebee;
+}
+
+
+.footer_menu ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    list-style: none;
+}
+
+/* добавляем линии по краям */
+.footer_menu ul li {
+    border-right: 2px solid white;
+    margin-left: 10px;
+}
+
+/* убираем у последнго ребенка линию */
+.footer_menu ul li:last-child {
+    border-right: none;
+}
+
+/* убираем у первого ребенка отступ слева чтобы все было по центру */
+.footer_menu ul li:first-child {
+    margin-left: 0;
+}
+
+.footer_menu ul li a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* добавляем всем li отступ справа */
+.footer_menu ul li {
+    padding-right: 10px;
+}
+
+/* убираем отспут справа последнего елемента */
+.footer_menu ul li:last-child {
+    padding-right: 0;
+}
+
+.footer_menu ul li a:hover {
+    color: black;
+    transition: all .5s ease;
+}
+.footer_menu p {
+    color: #b7a1a1;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+}

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script defer src="./src/animation/carouselDropdown.js"></script>
+    <script defer src="./src/animation/clickDetailsPhoto.js"></script>
+</head>
+
+
+<body>
+
+    <div class="main">
+
+        <div class="header">
+            <div class="logo">
+                <h1><a href="#">Laptop-Store</a></h1>
+                <div class="greeting">
+                    <p>Welcome, <span id="username">Evgeniy</span></p>
+                    <img src="./img/home-page-img/logo_user.png">
+                </div>
+            </div>
+
+            <div class="menu_header">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="#" id="clickMenu">Catalog
+                            <span class="down">&#x25BC;</span>
+                            <span class="up">&#x25B2;</span>
+                        </a></li>
+                    <li><a href="#">Create</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./register.html">Register</a></li>
+                    <li><a href="#">Logout</a></li>
+                    <li><a href="#">My Page</a></li>
+                </ul>
+
+                <div class="visible_menu">
+                    <div class="sub_menu">
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Acer</a></li>
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Asus</a></li>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="#">Lenovo</a></li>
+                            <li><a href="#">HP</a></li>
+                            <li><a href="#">MSI</a></li>
+                            <li><a href="#">Razer</a></li>
+                            <li><a href="#">GIGABYTE</a></li>
+                            <li><a href="#">Others</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="addcart">
+                    <a href="./cart.html">
+                        <img src="./img/home-page-img/add_cart.png">
+                    </a>
+                    <div class="counter">
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="content_back_color">
+            <div class="content">
+                <!-- appendChild here  "<div class="content">" -->
+
+                    <div class="sidebar_content">
+                        <div class="search_form">
+                            <h2>Search</h2>
+                            <form>
+                                <input type="text" name="search" placeholder="Enter product name...">
+                                <button type="submit">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </form>
+                        </div>
+    
+                        <div class="categories_content">
+                            <div class="categories_border">
+                                <h2>Catalog</h2>
+                                <ul>
+                                    <li><a href="#">All</a></li>
+                                    <li><a href="#">Acer</a></li>
+                                    <li><a href="#">Apple</a></li>
+                                    <li><a href="#">Asus</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                    <li><a href="#">HP</a></li>
+                                    <li><a href="#">MSI</a></li>
+                                    <li><a href="#">Razer</a></li>
+                                    <li><a href="#">GIGABYTE</a></li>
+                                    <li><a href="#">Others</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="content_catalog">
+                        <div style="padding: 0 30px;">
+    
+                            <div class="catalog_name">
+                                <span>My Publications</span>
+                                <hr>
+                            </div>
+    
+                            <div class="pagination">
+                                <div>
+                                    <a href="#" class="pagination_previous">&laquo; Previous</a>
+                                    <a href="#" class="pagination_a pagination_active">1</a>
+                                    <a href="#" class="pagination_a">2</a>
+                                    <a href="#" class="pagination_a">3</a>
+                                    <a href="#" class="pagination_a">4</a>
+                                    <a href="#" class="pagination_a">5</a>
+                                    <a href="#" class="pagination_next">Next &raquo;</a>
+                                </div>
+                            </div>
+    
+    
+    
+                            <div class="product_laptops">
+    
+                                <div class="laptop">
+                                    <div class="laptop_img">
+                                        <a href="#">
+                                            <img src="https://p.jarcomputers.com/1000x1000/6d/lenovo-legion-7-16iax7-82td0050bm-nblenovo82td0050bm_1000x1000.webp"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="laptop_description">
+                                        <a href="#">
+                                            <span>Лаптоп Lenovo Legion 7</span>
+                                        </a>
+                                        <div class="product_description">
+                                            <div>
+                                                <span class="span_name">Дисплей:</span>
+                                                <span class="span_description">15.6 Full HD</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Процесор:</span>
+                                                <span class="span_description">Intel Core i5-10210U</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">RAM памет:</span>
+                                                <span class="span_description">8GB DDR4</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Видео карта:</span>
+                                                <span class="span_description">Intel UHD Graphics</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Диск:</span>
+                                                <span class="span_description">512GB PCIe SSD</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Операционна система:</span>
+                                                <span class="span_description">Windows 10 Pro</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="laptop_total">
+                                        <span>3000.00 лв</span>
+                                        <div>
+                                            <a href="./details.html">Details</a>
+                                            <a href="#">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="laptop">
+                                    <div class="laptop_img">
+                                        <a href="#">
+                                            <img
+                                                src="https://avatars.mds.yandex.net/get-mpic/7724829/img_id1999329924572229676.png/600x800">
+                                        </a>
+                                    </div>
+                                    <div class="laptop_description">
+                                        <a href="#">
+                                            <span>Лаптоп Lenovo Legion 7</span>
+                                        </a>
+                                        <div class="product_description">
+                                            <div>
+                                                <span class="span_name">Дисплей:</span>
+                                                <span class="span_description">15.6 Full HD</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Процесор:</span>
+                                                <span class="span_description">Intel Core i5-10210U</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">RAM памет:</span>
+                                                <span class="span_description">8GB DDR4</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Видео карта:</span>
+                                                <span class="span_description">Intel UHD Graphics</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Диск:</span>
+                                                <span class="span_description">512GB PCIe SSD</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Операционна система:</span>
+                                                <span class="span_description">Windows 10 Pro</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="laptop_total">
+                                        <span>3000.00 лв</span>
+                                        <div>
+                                            <a href="#">Details</a>
+                                            <a href="#">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="laptop">
+                                    <div class="laptop_img">
+                                        <a href="#">
+                                            <img
+                                                src="https://avatars.mds.yandex.net/get-marketpic/6471067/picb73b422b5da4d557312b6ca14b9b03f7/600x800">
+                                        </a>
+                                    </div>
+                                    <div class="laptop_description">
+                                        <a href="#">
+                                            <span>Лаптоп Lenovo Legion 7</span>
+                                        </a>
+                                        <div class="product_description">
+                                            <div>
+                                                <span class="span_name">Дисплей:</span>
+                                                <span class="span_description">15.6 Full HD</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Процесор:</span>
+                                                <span class="span_description">Intel Core i5-10210U</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">RAM памет:</span>
+                                                <span class="span_description">8GB DDR4</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Видео карта:</span>
+                                                <span class="span_description">Intel UHD Graphics</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Диск:</span>
+                                                <span class="span_description">512GB PCIe SSD</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Операционна система:</span>
+                                                <span class="span_description">Windows 10 Pro</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="laptop_total">
+                                        <span>3000.00 лв</span>
+                                        <div>
+                                            <a href="#">Details</a>
+                                            <a href="#">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="laptop">
+                                    <div class="laptop_img">
+                                        <a href="#">
+                                            <img
+                                                src="https://lenovoonline.bg/erm/products.nsf/0/AC579E65D30AD5BFC22588FC0059C312/$File/medium.png">
+                                        </a>
+                                    </div>
+                                    <div class="laptop_description">
+                                        <a href="#">
+                                            <span>Лаптоп Lenovo Legion 7</span>
+                                        </a>
+                                        <div class="product_description">
+                                            <div>
+                                                <span class="span_name">Дисплей:</span>
+                                                <span class="span_description">15.6 Full HD</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Процесор:</span>
+                                                <span class="span_description">Intel Core i5-10210U</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">RAM памет:</span>
+                                                <span class="span_description">8GB DDR4</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Видео карта:</span>
+                                                <span class="span_description">Intel UHD Graphics</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Диск:</span>
+                                                <span class="span_description">512GB PCIe SSD</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Операционна система:</span>
+                                                <span class="span_description">Windows 10 Pro</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="laptop_total">
+                                        <span>3000.00 лв</span>
+                                        <div>
+                                            <a href="#">Details</a>
+                                            <a href="#">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="laptop">
+                                    <div class="laptop_img">
+                                        <a href="#">
+                                            <img
+                                                src="https://lenovoonline.bg/erm/products.nsf/0/114B00CEA75CF809C22588AD00304193/$File/medium.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="laptop_description">
+                                        <a href="#">
+                                            <span>Лаптоп Lenovo Legion 7</span>
+                                        </a>
+                                        <div class="product_description">
+                                            <div>
+                                                <span class="span_name">Дисплей:</span>
+                                                <span class="span_description">15.6 Full HD</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Процесор:</span>
+                                                <span class="span_description">Intel Core i5-10210U</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">RAM памет:</span>
+                                                <span class="span_description">8GB DDR4</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Видео карта:</span>
+                                                <span class="span_description">Intel UHD Graphics</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Диск:</span>
+                                                <span class="span_description">512GB PCIe SSD</span>
+                                            </div>
+                                            <div>
+                                                <span class="span_name">Операционна система:</span>
+                                                <span class="span_description">Windows 10 Pro</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="laptop_total">
+                                        <span>3000.00 лв</span>
+                                        <div>
+                                            <a href="#">Details</a>
+                                            <a href="#">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+                            <div class="pagination">
+                                <div>
+                                    <a href="#" class="pagination_previous">&laquo; Previous</a>
+                                    <a href="#" class="pagination_a pagination_active">1</a>
+                                    <a href="#" class="pagination_a">2</a>
+                                    <a href="#" class="pagination_a">3</a>
+                                    <a href="#" class="pagination_a">4</a>
+                                    <a href="#" class="pagination_a">5</a>
+                                    <a href="#" class="pagination_next">Next &raquo;</a>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <footer class="footer">
+            <div class="footer_top">
+                <a href="#">Laptop-Store</a>
+            </div>
+
+            <div class="footer_menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <!-- <li><a href="#">Catalog</a></li>
+                    <li><a href="#">Home</a></li> -->
+                </ul>
+                <p>Copyright &copy; 2022. All rights reserved</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

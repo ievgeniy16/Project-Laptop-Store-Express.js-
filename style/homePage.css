@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+.content_back_color {
+    background-color: #dbaf87;
+}
+.content {
+    width: 1000px;
+    margin: 0px auto 0 auto;
+    background-color: #dbaf87;
+    /* background-color: #b7ebdb; */
+    overflow: hidden;
+    /* position: relative; типо для блока который хоит перекрыть */
+}
+
+
+
+
+.sidebar_content {
+    float: left;
+    width: 240px;
+    text-align: left;
+
+    margin-bottom: 15px;
+}
+.search_form {
+    padding: 15px 0 15px 0;
+
+    width: 200px;
+    /* padding: 5%; */
+    border: 1px solid #707070;
+    border-radius: 5px;
+    background-color: #707070;
+
+    /* margin-top: 15px; */
+    /* margin-left: 20px; */
+    margin: 15px 0 15px 20px;
+}
+.search_form h2 {
+    font-family: 'century gothic', arial, sans-serif;
+    font-weight: normal;
+    margin: 10px 0 17px 10px;
+}
+form {
+    position: relative;
+    width: 180px;
+    margin:0 auto;
+}
+/* здесь поле поиска */
+.search_form input {
+    width: 180px;
+    height: 35px;
+    font-size: 15px;
+    /* местим текс внутри input */
+    padding-left: 3px;
+    /* местим input внутри form */
+    /* margin-left: 10px; */
+    border: 2px solid #7BA7AB;
+    border-radius: 5px;
+    outline: none;
+    background-color: #F9F0DA;
+    color: black;
+
+    margin-bottom: 5px;
+}
+
+/* здесь кнопка поиска */
+.search_form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 35px;
+    border: none;
+    background-color: #7BA7AB;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+
+    font-size: 20px;
+
+}
+/* тут делаем все для лупы поиска взятой из FontAwesome */
+/* .search_form button::before {
+    content: '\f002';
+    font-family: 'FontAwesome';
+    font-size: 22px;
+    color: #F9F0DA;
+} */
+
+
+
+/* CATEGORIES CONTENT */
+.categories_content {
+    width: 240px;
+    height: auto;
+    /* padding-bottom: 15px; */
+}
+.categories_border {
+    width: 200px;
+    border: 1px solid #5e68bd;
+    border-radius: 5px;
+    background-color: #5e68bd;
+    margin-left: 20px;
+}
+.categories_border h2 {
+    /* font-size: 18px; */
+    /* letter-spacing: 0.1em; */
+    font-family: 'century gothic', arial, sans-serif;
+    color: rgb(15, 1, 1);
+    padding: 3px 0 3px 10px;
+    border-bottom: 1px solid white;
+
+    font-weight: normal;
+}
+.categories_border ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+.categories_border ul li a:hover {
+    color: black;
+}
+.categories_border ul li {
+    padding: 2px 0 2px 10px;
+    list-style: none;
+    border-bottom: 1px solid white;
+}
+.categories_border ul li:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main_content {
+    width: 760px;
+    float: left;
+    height: auto;
+}
+
+.slideshow-container {
+    width: 760px;
+    float: left;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.img_slade {
+    margin: 15px 40px 15px 20px;
+    display: none;
+}
+.img_slade img {
+    width: 100%;
+    height: 500px;
+    /* vertical-align: middle; */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    /* отступ внутри стрелки тага <a> */
+    padding: 15px;
+    color: rgb(60, 221, 11);
+    font-weight: 18px;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 5px 5px 0;
+}
+.prev {
+    margin-left: 20px;
+}
+.next {
+    border-radius: 5px 0 0 5px;
+    margin-left: 670px;
+}
+.prev:hover, .next:hover {
+    background-color: rgb(8, 4, 4);
+}
+
+.number_img {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+}
+
+ 
+
+
+

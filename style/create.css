@@ -1,0 +1,102 @@
+.content_create {
+    width: 700px;
+    height: auto;
+    background-color: #f5f5f5;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'poppins', sans-serif;
+    font-family: "Lucida Grande", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+    color: #555555;
+}
+.content_create form {
+    width: 100%;
+    margin-left: 30px;
+}
+.content_create form h3 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.content_create form ul {
+    list-style: none;
+    font-size: 16px;
+}
+
+.content_create form ul li {
+    /* display: block; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.content_create form ul li label {
+    display: inline-block;
+    width: 160px;
+}
+.content_create form ul li input {
+    border: 1px solid rgb(202, 139, 139);
+    box-shadow: 0 1px 2px rgb(43, 18, 18) inset;
+    width: 250px;
+    font-size: 16px;
+    padding: 2px;
+    padding-left: 5px;
+    line-height: 1.5em;
+    outline: none;
+}
+
+.content_create form ul li select {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid rgb(202, 139, 139);
+    width: 170px;
+    outline: none;
+    cursor: pointer;
+}
+.custom_select option {
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+.select-input-imgs {
+    height: 240px;
+}
+.select-input-imgs label {
+    float: left;
+    height: 240px;
+    width: 160px;
+}
+.select-input-imgs ul  {
+    float: left;
+    margin-left: 5px;
+} 
+
+
+.content_create textarea {
+    border: 1px solid;
+    width: 400px;
+    height: 100px;
+    margin-top: 20px;
+    outline: none;
+    font-size: 16px;
+}
+.content_create form ul li:last-child label {
+    position: relative;
+    top: 0;
+}
+
+
+.content_create form input[type="submit"] {
+    padding: 10px 16px;
+    margin: 10px 0 20px 165px;
+    border-radius: 5px; 
+    background-color: #664e91;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+.content_create form input[type="submit"]:hover {
+    background-color:#dbaf87;
+    color: black;
+}

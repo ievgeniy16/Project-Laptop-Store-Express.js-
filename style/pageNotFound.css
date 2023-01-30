@@ -1,0 +1,75 @@
+.page-not-found  {
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.page-not-found h1 {
+    margin-top: 70px;
+    font-size: 150px;
+    letter-spacing: 10px;
+    /* font-weight: 200; */
+}
+.page-not-found h3 {
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 5px;
+    border-top: 5px solid;
+    width: 300px;
+    margin: 0 auto;
+}
+.page-not-found p {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.page-not-found div {
+    margin-bottom: 80px;
+}
+.page-not-found a {
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border:1px solid white;
+    background-color: white;
+    color: #dbaf87;
+    padding: 4px 40px;
+    margin-top: 5px;
+}
+.page-not-found a:hover {
+    background-color: #664e91;
+    color: white;
+}
+
+
+.page-not-found .cloud-1 {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    top: 25%;
+    right: 20%;
+}
+.page-not-found .cloud-1 img {
+    width: 100%;
+    /* background-color: rgb(188 242 229); */
+}
+.page-not-found .cloud-2 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 55%;
+    left: 27%;
+}
+.page-not-found .cloud-2 img {
+    width: 100%;
+    /* background-color: rgb(228 250 245); */
+}
+.page-not-found .cloud-3 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 35%;
+    left: 23%;
+}
+.page-not-found .cloud-3 img {
+    width: 100%;
+}

@@ -1,0 +1,269 @@
+/* PART ONE */
+/* .content_product {
+    height: 500px;
+    background-color: rgb(88, 146, 61);
+} */
+.show_main_menu {
+    box-sizing: border-box;
+    position: relative;
+    width: 350px;
+    /* height: 350px; */
+    height: 410px;
+    float: left;
+
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.img_box_laptop {
+    display: none;
+    width: 350px;
+    height: 350px;
+
+    position: relative;
+}
+.img_box_laptop img {
+    display: block;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+.row_laptop {
+    margin-top: 30px;
+}
+.row_laptop img {
+    width: 100%;
+
+    /*здесь делаем фоткт по центру*/
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.cursor_laptop {
+    cursor: pointer;
+}
+
+
+
+.prev_laptop,
+.next_laptop {
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.next_laptop {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev_laptop:hover,
+.next_laptop:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.row_laptop:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.column_laptop {
+    float: left;
+    width: 16%;
+}
+.demo_laptop {
+    opacity: 0.6;
+}
+
+.active_laptop,
+.demo_laptop:hover {
+    opacity: 1;
+}
+
+
+
+
+/* PART TWO */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 13px;
+    /* padding-bottom: 10px; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+.modal_content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 60%;
+    width: 800px;
+    height: 600px;
+}
+
+.imgMySlides {
+    width: 600px;
+    height: 600px;
+    float: right;
+
+    position: relative;
+}
+.mySlides img {
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    padding: 15px;
+}
+.column {
+    /* float: left; */
+    position: relative;
+    top: 0;
+    left: 0;
+    /* width: 16%; */
+    width: 130px;
+    padding: 3px 8px;
+
+    cursor: pointer;
+    /* height: 100%; */
+}
+.column img {
+    width: 100%;
+}
+
+.prev_laptop_hidden,
+.next_laptop_hidden {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 20px;
+    margin-top: -50px;
+    color: rgb(56, 20, 20);
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.next_laptop_hidden {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev_laptop_hidden:hover,
+.next_laptop_hidden:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fefefe;
+}
+
+.close {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    right: 220px;
+    font-size: 60px;
+    font-weight: bold;
+}
+.close:hover, 
+.close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/* PART THREE */
+.text_main_menu {
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5f5a6;
+    background-color: rgb(88 146 61 / 64%);
+    border-radius: 15px;
+}
+.span_name_details {
+    font-size: 17px;
+    font-weight: bold;
+}
+.span_description_details {
+    width: 600px;
+}
+.span_name_details_price {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.span_description_details_price {
+    font-size: 30px;
+    color: red;
+    font-weight: 600;
+}
+
+.div_description_details {
+    width: 600px;
+    margin-top: 5px;
+}
+
+
+.div_details_control {
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.div_details_control  button {
+    border-radius: 10px;
+    padding: 7px 14px;
+    font-size: 16px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #35048fd9;
+    color: white;
+}
+.div_details_control button:hover {
+    border: 3px solid greenyellow;
+    border-radius: 10px;
+    color: black;
+    background-color: greenyellow;
+}
+
+.div_details_control  button:last-child {
+    /* margin-top: 10px; */
+    padding: 12px;
+    background-color: red;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 5px;
+    margin-left: 5px;
+}
+.div_details_control  button:last-child:hover{
+    background-color: greenyellow;
+    color: black;
+    font-weight: bold;
+}

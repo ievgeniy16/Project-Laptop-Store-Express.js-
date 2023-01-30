@@ -1,0 +1,22 @@
+.content_about {
+    font-family: 'poppins', sans-serif;
+}
+.content_about h1 {
+    margin: 20px 0;
+}
+.content_about h3 {
+    margin: 5px 0;
+}
+.content_about p {
+    margin-bottom: 10px;
+    text-indent: 30px;
+}
+.content_about p:last-child {
+    margin-bottom: 30px;
+}
+
+.content_about span {
+    font-style: italic;
+    font-weight: 600;
+    color: #664e91;
+}

@@ -1,0 +1,80 @@
+.content_back_color {
+    background-color: #dbaf87;
+}
+
+.content__login {
+    font-family: 'poppins', sans-serif;
+}
+.content__login form {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    background-image: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1564049481/bg-clouds.jpg);
+    background-size: cover;
+    margin: 50px auto;
+}
+form .heading {
+    /* font-size: 2em; <== 32px */
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: black;
+}
+form .box {
+    margin: 6px 0;
+}
+form .box div {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 3px 0;
+}
+form .box input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(19, 19, 19);
+    color: #fff;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+.loginBtn {
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    margin: 5px 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    background: #102770;
+}
+.loginBtn:hover {
+    background-color: #dbaf87;
+    color: rgb(22, 7, 7);
+}
+
+form .text {
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+}
+form .text a {
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-style: normal;
+}
+form .text a:hover {
+    color: rgb(48, 15, 167);
+    text-decoration: underline;
+}
