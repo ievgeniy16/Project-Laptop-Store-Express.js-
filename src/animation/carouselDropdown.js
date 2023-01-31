@@ -18,7 +18,6 @@ function scrollFunction() {
 }
 // catalog call this function
 function topFunction() {
-    // document.body.scrollTop = 0;  for Safari
     document.documentElement.scrollTop = 0;
 }
 
@@ -65,11 +64,7 @@ function dropdown() {
 function carousel() {
     let slideIndex = 1;
     shwowSlides(slideIndex);
-   /*     если нажимаем на стрелки left right идет с html но перестал работать
-    function plusSlides(n) {
-        shwowSlides(slideIndex += n);
-    }    */
-    // тоже самое что и снизу но проще и меньше кода
+  
     document.querySelector('.prev').addEventListener('click', () => {
         shwowSlides(slideIndex += -1)
     });
@@ -98,8 +93,7 @@ function carousel() {
         slides[slideIndex - 1].style.display = 'block';
     }
 }
-// carousel();
-// dropdown();
+
 
 
 
