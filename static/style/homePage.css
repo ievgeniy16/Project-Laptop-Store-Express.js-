@@ -58,7 +58,7 @@ form {
     border: 2px solid #7BA7AB;
     border-radius: 5px;
     outline: none;
-    background-color: #F9F0DA;
+    background-color: white;
     color: black;
 
     margin-bottom: 5px;
@@ -67,7 +67,8 @@ form {
 /* здесь кнопка поиска */
 .search_form button {
     position: absolute;
-    top: 0;
+    /* top: 0; */
+    top: 120px;
     right: 0;
     width: 30px;
     height: 35px;
@@ -79,13 +80,39 @@ form {
     font-size: 20px;
 
 }
-/* тут делаем все для лупы поиска взятой из FontAwesome */
-/* .search_form button::before {
-    content: '\f002';
-    font-family: 'FontAwesome';
-    font-size: 22px;
-    color: #F9F0DA;
-} */
+
+.laptops_rating {
+    height: auto;
+    padding: 15px 0 15px 0;
+    width: 200px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    background-color: #707070;
+    margin: 15px 0 15px 20px;
+
+}
+.laptops_rating h2 {
+    width: 200px;
+    /* margin-left: 10px; */
+    font-family: 'century gothic', arial, sans-serif;
+    font-weight: normal;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+}
+.laptops_rating ul li {
+    color: #fffffe;
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    list-style: none;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.laptops_rating ul li a {
+    /* text-decoration: none; */
+    color: #ffffff;
+}
+
 
 
 

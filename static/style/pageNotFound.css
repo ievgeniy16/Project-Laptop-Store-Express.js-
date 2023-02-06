@@ -29,15 +29,17 @@
     font-size: 25px;
     text-transform: uppercase;
     text-decoration: none;
-    border:1px solid white;
-    background-color: white;
-    color: #dbaf87;
+    border: 1px solid white;
+    background-color: #664e91;
+    color: white;
     padding: 4px 40px;
     margin-top: 5px;
 }
 .page-not-found a:hover {
-    background-color: #664e91;
-    color: white;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0);
+    color: black;
+    /* font-weight: bold; */
 }
 
 

@@ -18,6 +18,7 @@ const app = express();
 app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
 
+// form parser in req.body
 app.use(express.urlencoded({ extended: true}));
 app.use('/static', express.static('static'));
 

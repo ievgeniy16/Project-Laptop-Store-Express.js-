@@ -12,7 +12,7 @@
     float: left;
 
     margin-top: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 .img_box_laptop {
     display: none;
@@ -22,8 +22,10 @@
     position: relative;
 }
 .img_box_laptop img {
-    display: block;
-    width: 100%;
+    /* display: block; */
+    /* width: 100%; */
+    max-width: 100%;
+    max-height: 100%;
 
     position: absolute;
     top: 0;
@@ -34,10 +36,20 @@
     cursor: pointer;
 }
 .row_laptop {
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-left: 13px;
+    height: 70px;
+}
+.column_laptop {
+    /* width: 100%; */
+    width: 50px;
+    height: 50px;
+
 }
 .row_laptop img {
     width: 100%;
+    max-width: 100%;
+    max-height: 100%;
 
     /*здесь делаем фоткт по центру*/
     position: relative;
@@ -52,13 +64,15 @@
 
 .prev_laptop,
 .next_laptop {
+    background-color: rgba(216, 157, 157, 0.8);
+    color: white;
+    opacity: 0.7;
     cursor: pointer;
     position: absolute;
-    top: 55%;
+    top: 46%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
-    color: white;
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
@@ -69,15 +83,16 @@
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
 .prev_laptop:hover,
 .next_laptop:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(26, 2, 2, 0.877);
+    opacity: 1;
 }
+
 .row_laptop:after {
-    content: '';
+    /* content: '';
     display: table;
-    clear: both;
+    clear: both; */
 }
 .column_laptop {
     float: left;
@@ -127,7 +142,8 @@
     position: relative;
 }
 .mySlides img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
 
     position: absolute;
     top: 0;
@@ -136,7 +152,7 @@
     right: 0;
     margin: auto;
 
-    padding: 15px;
+    padding: 25px;
 }
 .column {
     /* float: left; */
@@ -145,13 +161,15 @@
     left: 0;
     /* width: 16%; */
     width: 130px;
+    height: 100px;
     padding: 3px 8px;
 
     cursor: pointer;
     /* height: 100%; */
 }
 .column img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .prev_laptop_hidden,

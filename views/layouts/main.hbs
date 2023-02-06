@@ -20,7 +20,7 @@
 
         <div class="header">
             <div class="logo">
-                <h1><a href="#">Laptop-Store</a></h1>
+                <h1><a href="/">Laptop-Store</a></h1>
                 <div class="greeting">
                     <p>Welcome, <span id="username">Evgeniy</span></p>
                     <img src="/static/img/home-page-img/logo_user.png">
@@ -29,27 +29,35 @@
 
             <div class="menu_header">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="#" id="clickMenu">Catalog
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="javascript:void(0)" id="clickMenu">Catalog
                             <span class="down">&#x25BC;</span>
                             <span class="up">&#x25B2;</span>
                         </a></li>
-
                     <script>
                         function dropdown() {
                             let up = document.querySelector('.up');
                             up = up.style.display = 'none';
+
+                            function offScrollTo() {
+                                window.scrollTo(0, 0);
+                            }
 
                             document.getElementById('clickMenu').addEventListener('click', () => {
                                 if (document.querySelector('.up').style.display === 'none') {
                                     document.querySelector('.up').style.display = 'inline-block';
                                     document.querySelector('.down').style.display = 'none';
                                     document.querySelector('.visible_menu').style.display = 'block';
+                                    
+                                    window.addEventListener('scroll', offScrollTo);
+
                                 } else {
                                     document.querySelector('.up').style.display = 'none';
                                     document.querySelector('.down').style.display = 'inline-block';
                                     document.querySelector('.visible_menu').style.display = 'none';
+
+                                    window.removeEventListener('scroll', offScrollTo);
                                 }
                             });
 
@@ -72,34 +80,29 @@
                         dropdown()
                     </script>
 
-                    <li><a href="./create.html">Create</a></li>
-                    <li><a href="./login.html">Login</a></li>
-                    <li><a href="./register.html">Register</a></li>
+                    <li><a href="/create">Create</a></li>
+                    <li><a href="/auth/login">Login</a></li>
+                    <li><a href="/auth/register">Register</a></li>
                     <li><a href="#">Logout</a></li>
-                    <li><a href="./myPage.html">My Page</a></li>
+                    <li><a href="/my-page">My Page</a></li>
                 </ul>
 
                 <div class="visible_menu">
                     <div class="sub_menu">
                         <ul>
-                            <li><a href="#"></a></li>
-                            <li><a href="./catalog.html">All</a></li>
-                            <li><a href="#">Acer</a></li>
-                            <li><a href="#">Apple</a></li>
-                            <li><a href="#">Asus</a></li>
-                            <li><a href="#">Samsung</a></li>
-                            <li><a href="#">Lenovo</a></li>
-                            <li><a href="#">HP</a></li>
-                            <li><a href="#">MSI</a></li>
-                            <li><a href="#">Razer</a></li>
-                            <li><a href="#">GIGABYTE</a></li>
-                            <li><a href="#">Others</a></li>
+                            <li><a href="javascript:void(0)"></a></li>
+                            <li><a href="/catalog/all">All</a></li>
+                            <li><a href="/catalog/apple">Apple</a></li>
+                            <li><a href="/catalog/asus">Asus</a></li>
+                            <li><a href="/catalog/lenovo">Lenovo</a></li>
+                            <li><a href="/catalog/msi">MSI</a></li>
+                            <li><a href="/catalog/others">Others</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="addcart">
-                    <a href="./cart.html">
+                    <a href="/cart">
                         <img src="/static/img/home-page-img/add_cart.png">
                     </a>
                     <div class="counter">
@@ -108,8 +111,6 @@
                 </div>
             </div>
         </div>
-
-
 
 
         <div class="content_back_color">
@@ -125,13 +126,12 @@
 
             </div>
 
-            
             <script>
                 function topFunction() {
                     document.documentElement.scrollTop = 0;
                 }
                 document.addEventListener('scroll', () => {
-                    if (document.documentElement.scrollTop > 250) {
+                    if (document.documentElement.scrollTop > 200) {
                         document.getElementById('myBtn').style.display = 'block';
                     } else {
                         document.getElementById('myBtn').style.display = 'none';
@@ -142,17 +142,16 @@
         </div>
 
 
-
         <footer class="footer">
             <div class="footer_top">
-                <a href="#">Laptop-Store</a>
+                <a href="javascript:void(0)">Laptop-Store</a>
             </div>
 
             <div class="footer_menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Catalog</a></li>
+                    <li><a href="javascript:void(0)">Home</a></li>
+                    <li><a href="javascript:void(0)">About</a></li>
+                    <li><a href="javascript:void(0)">Catalog</a></li>
                     <!-- <li><a href="#">Catalog</a></li>
                     <li><a href="#">Home</a></li> -->
                 </ul>

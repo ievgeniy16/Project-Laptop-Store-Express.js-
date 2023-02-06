@@ -1,16 +1,110 @@
+const { getAll, getById, getLenovo, getApple, getAsus, getMSI, getOthers } = require('../services/catalogService.js');
+
 const router = require('express').Router();
 
 
-router.get('/', (req, res) => {
+router.get('/all', (req, res) => {
+    const search = req.query.search || '';
+    const fromPrice = Number(req.query.fromPrice) || 0;
+    const toPrice = Number(req.query.toPrice) || 9999;
+
+    const catalog = getAll(search, fromPrice, toPrice);
+
     res.render('catalog', {
-        title: 'Catalog'
+        title: 'Catalog / All',
+        catalog,
+        search,
+        fromPrice,
+        toPrice
     });
 });
 
-router.get('/details', (req, res) => {
-    res.render('details', {
-        title: 'Details'
-    })
+router.get('/apple', (req, res) => {
+    const fromPrice = Number(req.query.fromPrice) || 0;
+    const toPrice = Number(req.query.toPrice) || 9999;
+
+    const catalog = getApple(fromPrice, toPrice);
+
+    res.render('catalog', {
+        title: 'Catalog / Apple',
+        catalog,
+        fromPrice,
+        toPrice
+    });
+});
+
+router.get('/asus', (req, res) => {
+    const fromPrice = Number(req.query.fromPrice) || 0;
+    const toPrice = Number(req.query.toPrice) || 9999;
+
+    const catalog = getAsus(fromPrice, toPrice);
+
+    res.render('catalog', {
+        title: 'Catalog / Asus',
+        catalog,
+        fromPrice,
+        toPrice
+    });
+});
+
+router.get('/lenovo', (req, res) => {
+    const fromPrice = Number(req.query.fromPrice) || 0;
+    const toPrice = Number(req.query.toPrice) || 9999;
+
+    const catalog = getLenovo(fromPrice, toPrice);
+
+    res.render('catalog', {
+        title: 'Catalog / Lenovo',
+        catalog,
+        fromPrice,
+        toPrice
+    });
+});
+
+router.get('/msi', (req, res) => {
+    const fromPrice = Number(req.query.fromPrice) || 0;
+    const toPrice = Number(req.query.toPrice) || 9999;
+
+    const catalog = getMSI(fromPrice, toPrice);
+
+    res.render('catalog', {
+        title: 'Catalog / MSI',
+        catalog,
+        fromPrice,
+        toPrice
+    });
+});
+
+router.get('/others', (req, res) => {
+    const fromPrice = Number(req.query.fromPrice) || 0;
+    const toPrice = Number(req.query.toPrice) || 9999;
+
+    const catalog = getOthers(fromPrice, toPrice);
+
+    res.render('catalog', {
+        title: 'Catalog / Others',
+        catalog,
+        fromPrice,
+        toPrice
+    });
+});
+
+
+
+
+router.get('/details/:id', (req, res) => {
+    const productId = req.params.id;
+    const product = getById(productId);
+
+    if (product) {
+        res.render('details', {
+            title: 'Details',
+            product
+        });
+    } else {
+        res.render('404');
+    }
+
 });
 
 

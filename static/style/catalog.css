@@ -35,11 +35,13 @@
 }
 .catalog_name {
     /* text-transform: uppercase; */
-    margin: 15px 0 5px 0;
+    margin: 25px 0 15px 0;
 }
 
 .catalog_name span {
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 
@@ -103,11 +105,13 @@
     width: 210px;
     height: 190px;
     float: left;
+
+    margin-top: 5px;
 }
 .laptop_img a img {
     float: left;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     /* border: 5px solid #e7bfa4; */
     /* border-radius: 5px; */
 }
@@ -152,7 +156,7 @@
     font-weight: bold;
 }
 .laptop_total div {
-    margin-top: 5px;
+    margin-top: 15px;
 }
 .laptop_total a {
     /* font-family: 'Roboto', sans-serif; */
@@ -165,6 +169,80 @@
     margin-right: 10px;
 }
 .laptop_total a:hover {
-    background-color: #949bd8;
+    background-color: darkslateblue;
+    color: white;
     /* transition: all 1s; */
+}
+
+
+
+
+/*--------------  RANGE SLIDER ----------- */
+.range_div {
+    width: 180px;
+    background-color: #fcfcfc;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    padding: 2px;
+    margin-bottom: 20px;
+}
+.range_slider {
+    font-size: 20px;
+    /* font-family: monospace; */
+    color: black;
+    width: auto;
+    max-width: 100%;
+}
+.range_slider span {
+    display: block;
+    margin-bottom: 2px;
+}
+.range_slider div {
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    align-items: center; 
+}
+.range_slider input[type="range"] {
+    -webkit-appearance: none !important;
+    height: 3px;
+    background-color: black;
+    border: none;
+    outline: none;
+}
+.range_slider div input {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.range_slider div p {
+    font-family: monospace;
+}
+
+
+/* NOT FOUND RESULTS */
+.search_result {
+    width: 760px;
+    float: left;
+}
+.img_sad_smile {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+}
+.img_sad_smile img {
+    width: 100%;
+}
+.text_sad_smile {
+    margin-top: 25px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    /* font-family: cursive; */
+    text-align: center;
+}
+.text_sad_smile span {
+    font-weight: bold;
 }

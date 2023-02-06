@@ -1,29 +1,35 @@
 <div class="sidebar_content">
-    <div class="search_form">
+    {{!-- <div class="search_form">
         <h2>Search</h2>
-        <form>
-            <input type="text" name="search" placeholder="Enter product name...">
+        <form method="get">
+            <input name="search" placeholder="Enter product name..." value="{{search}}">
             <button type="submit">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </button>
         </form>
+    </div> --}}
+
+    <div class="laptops_rating">
+        <h2>Laptops Rating</h2>
+        <ul>
+            <li><span>1.</span><a href="javascript:void(0)">Dell Alienware m17</a></li>
+            <li><span>2.</span><a href="javascript:void(0)">MSI Titan GT77</a></li>
+            <li><span>3.</span><a href="javascript:void(0)">Lenovo Legion 7</a></li>
+            <li><span>4.</span><a href="javascript:void(0)">ASUS ROG STRIX 17</a></li>
+            <li><span>5.</span><a href="javascript:void(0)">MSI Vector GP76</a></li>
+        </ul>
     </div>
 
     <div class="categories_content">
         <div class="categories_border">
             <h2>Catalog</h2>
             <ul>
-                <li><a href="#">All</a></li>
-                <li><a href="#">Acer</a></li>
-                <li><a href="#">Apple</a></li>
-                <li><a href="#">Asus</a></li>
-                <li><a href="#">Samsung</a></li>
-                <li><a href="#">Lenovo</a></li>
-                <li><a href="#">HP</a></li>
-                <li><a href="#">MSI</a></li>
-                <li><a href="#">Razer</a></li>
-                <li><a href="#">GIGABYTE</a></li>
-                <li><a href="#">Others</a></li>
+                <li><a href="/catalog/all">All</a></li>
+                <li><a href="/catalog/apple">Apple</a></li>
+                <li><a href="/catalog/asus">Asus</a></li>
+                <li><a href="/catalog/lenovo">Lenovo</a></li>
+                <li><a href="/catalog/msi">MSI</a></li>
+                <li><a href="/catalog/others">Others</a></li>
             </ul>
         </div>
     </div>

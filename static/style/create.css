@@ -2,6 +2,7 @@
     width: 700px;
     height: auto;
     background-color: #f5f5f5;
+    background-color: white;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -11,13 +12,15 @@
 }
 .content_create form {
     width: 100%;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 .content_create form h3 {
     padding-top: 30px;
     padding-bottom: 30px;
     font-weight: bold;
     font-size: 30px;
+
+    margin-left: 30px;
 }
 .content_create form ul {
     list-style: none;
@@ -25,13 +28,14 @@
 }
 
 .content_create form ul li {
-    /* display: block; */
     padding-top: 5px;
     padding-bottom: 5px;
 }
 .content_create form ul li label {
     display: inline-block;
     width: 160px;
+
+    margin-left: 30px;
 }
 .content_create form ul li input {
     border: 1px solid rgb(202, 139, 139);
@@ -57,7 +61,6 @@
     padding: 5px;
 }
 
-
 .select-input-imgs {
     height: 240px;
 }
@@ -70,7 +73,6 @@
     float: left;
     margin-left: 5px;
 } 
-
 
 .content_create textarea {
     border: 1px solid;
@@ -99,4 +101,31 @@
 .content_create form input[type="submit"]:hover {
     background-color:#dbaf87;
     color: black;
+}
+
+
+
+
+
+/* for error handling for input */
+.errorMessages {
+    display: block;
+    margin: 0 30px 30px 30px;
+    padding: 0px 30px 7px 30px;
+    /* color: #B94A48; */
+    color: red;
+    background-color: #F2DEDE;
+    border: 2px solid #EED3D7;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(255, 0, 0, 0.623);
+}
+.errorMessages li {
+    list-style: disc;
+    font-size: 14px;
+    height: 22px;
+    font-style: italic;
+}
+.errorMessages li span {
+    font-style: normal;
+    font-weight: bold;
 }
