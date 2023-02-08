@@ -56,6 +56,13 @@
     outline: none;
     cursor: pointer;
 }
+.content_create .custom_select {
+    /* display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 12px; */
+    width: 250px;
+}
 .custom_select option {
     cursor: pointer;
     padding: 5px;
@@ -72,11 +79,15 @@
 .select-input-imgs ul  {
     float: left;
     margin-left: 5px;
+}
+.content_create form .select-input-imgs ul li input {
+    width: 505px;
+    width: 470px;
 } 
 
 .content_create textarea {
     border: 1px solid;
-    width: 400px;
+    width: 470px;
     height: 100px;
     margin-top: 20px;
     outline: none;
@@ -90,7 +101,7 @@
 
 .content_create form input[type="submit"] {
     padding: 10px 16px;
-    margin: 10px 0 20px 165px;
+    margin: 10px 0 20px 195px;
     border-radius: 5px; 
     background-color: #664e91;
     color: white;

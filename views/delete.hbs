@@ -1,0 +1,48 @@
+<div class="content_create">
+
+    {{#with product}}
+    <form action="/catalog/delete/{{id}}" method="post">
+        <h3>Delete a Laptop</h3>
+        <ul>
+            <li> <label>Product Name</label> <input type="text" name="name" value="{{name}}" disabled></li>
+            <li> <label>Display</label> <input type="text" name="display" value="{{display}}" disabled></li>
+            <li> <label>Processor</label> <input type="text" name="processor" value="{{processor}}" disabled></li>
+            <li> <label>Graphic Card</label> <input type="text" name="graphic" value="{{graphic}}" disabled></li>
+            <li> <label>RAM size</label> <input type="text" name="ramMemory" value="{{ramMemory}}" disabled></li>
+            <li> <label>HDD/SDD Capacity</label> <input type="text" name="totalCapacity" value="{{totalCapacity}}" disabled></li>
+            <li> <label>Operating System</label> <input type="text" name="operatingSystem" value="{{operatingSystem}}" disabled></li>
+            <li> <label>Price</label> <input type="number" name="price" value="{{price}}" disabled></li>
+            <li>
+                <label>Product Category</label>
+                <select class="custom_select" name="productCategory" size="1" disabled>
+                    <option value="" hidden>Selected value...</option>
+                    <option value="Apple" {{#if selectApple}}selected{{/if}}>Apple</option>
+                    <option value="Asus" {{#if selectAsus}}selected{{/if}}>Asus</option>
+                    <option value="Lenovo" {{#if selectLenovo}}selected{{/if}}>Lenovo</option>
+                    <option value="MSI" {{#if selectMSI}}selected{{/if}}>MSI</option>
+                    <option value="Others" {{#if selectOthers}}selected{{/if}}>Others</option>
+                </select>
+            </li>
+            <li class="select-input-imgs">
+                <label for="">Image of Product</label>
+                <ul>
+                    <!-- <input type="file" accept="image/*" multiple name="fileUpload[]" size="50"> -->
+                    <li><input type="text" placeholder="Image URL" name="img1" value="{{img1}}" disabled></li>
+                    <li><input type="text" placeholder="Image URL" name="img2" value="{{img2}}" disabled></li>
+                    <li><input type="text" placeholder="Image URL" name="img3" value="{{img3}}" disabled></li>
+                    <li><input type="text" placeholder="Image URL" name="img4" value="{{img4}}" disabled></li>
+                    <li><input type="text" placeholder="Image URL" name="img5" value="{{img5}}" disabled></li>
+                    <li><input type="text" placeholder="Image URL" name="img6" value="{{img6}}" disabled></li>
+                </ul>
+            </li>
+            <li>
+                <label>Description</label>
+                <textarea name="description" cols="30" rows="10" disabled>{{description}}</textarea>
+            </li>
+        </ul>
+
+        <input type="submit" value="Confirm Delete">
+    </form>
+    {{/with}}
+
+</div>

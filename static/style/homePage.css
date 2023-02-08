@@ -83,7 +83,7 @@ form {
 
 .laptops_rating {
     height: auto;
-    padding: 15px 0 15px 0;
+    padding: 7px 0 15px 0;
     width: 200px;
     border: 1px solid #707070;
     border-radius: 5px;
@@ -97,11 +97,12 @@ form {
     font-family: 'century gothic', arial, sans-serif;
     font-weight: normal;
     margin-bottom: 10px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(255, 254, 254);
     padding-left: 10px;
+    padding-bottom: 3px;
 }
 .laptops_rating ul li {
-    color: #fffffe;
+    color: #ffffff;
     font-size: 16px;
     font-family: Verdana, sans-serif;
     list-style: none;
@@ -110,7 +111,7 @@ form {
 }
 .laptops_rating ul li a {
     /* text-decoration: none; */
-    color: #ffffff;
+    color: #c6ff3e;
 }
 
 

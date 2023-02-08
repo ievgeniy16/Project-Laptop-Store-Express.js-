@@ -22,7 +22,8 @@ async function persist() {
 function getAll(search, fromPrice, toPrice) {
     return data
         .filter(p => p.name.toLowerCase().includes(search.toLowerCase()))
-        .filter(p => p.price >= fromPrice && p.price <= toPrice);
+        .filter(p => p.price >= fromPrice && p.price <= toPrice)
+        .sort((a, b) => a.name.localeCompare(b.name));
 }
 
 function getApple(fromPrice, toPrice) {
@@ -82,7 +83,6 @@ async function create(productData) {
     };
 
     const missing = Object.entries(product).filter(([k, v]) => !v);
-    console.log(missing);
     if (missing.length > 0) {
         throw new Error(missing.map(m => `${m[0]}`).join('\n'));
         // throw new Error(missing.map(m => `${m[0]} is required!`).join('\n'));
@@ -92,6 +92,29 @@ async function create(productData) {
     await persist();
     return product;
 }
+
+
+async function update(id, product) {
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].id == id) {
+            data.splice(i, 1, product);
+            // data.push(product);
+        }
+    }
+    await persist();
+}
+
+
+async function deleteById(id) {
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].id == id) {
+            data.splice(i, 1);
+        }
+    }
+    await persist();
+}
+
+
 
 function createId() {
     return ('000000' + (Math.random() * 999999 | 0).toString(16)).slice(-6);
@@ -106,5 +129,7 @@ module.exports = {
     getMSI,
     getOthers,
     getById,
-    create
+    create,
+    update,
+    deleteById
 };
