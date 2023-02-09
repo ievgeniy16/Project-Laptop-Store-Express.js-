@@ -16,7 +16,8 @@
     "img4": "https://avatars.mds.yandex.net/get-mpic/5418200/img_id5185931354745934488.png/orig",
     "img5": "https://avatars.mds.yandex.net/get-mpic/5319329/img_id7475526119887950789.png/orig",
     "img6": "https://avatars.mds.yandex.net/get-mpic/5235295/img_id6646942131914381102.png/orig",
-    "description": "Legion 7 Gen 6 (16 AMD) gaming notebook. Equipped with the latest generation AMD processors and NVIDIA ® GeForce RTX ™ graphics, this highest possible resolution Its higher 16:10 aspect ratio and refresh rates of up to 165 Hz put you in the  of the game You will enjoy an enlarged field of view and can fully immerse yourself in the game world."
+    "description": "Legion 7 Gen 6 (16 AMD) gaming notebook. Equipped with the latest generation AMD processors and NVIDIA ® GeForce RTX ™ graphics, this highest possible resolution Its higher 16:10 aspect ratio and refresh rates of up to 165 Hz put you in the  of the game You will enjoy an enlarged field of view and can fully immerse yourself in the game world.",
+    "owner":"peter@abv.bg"
   },
   {
     "id": "0313b0",
@@ -103,7 +104,7 @@
     "ramMemory": "16GB",
     "totalCapacity": "512GB",
     "operatingSystem": "macOS",
-    "price": 3600,
+    "price": 4590,
     "productCategory": "Apple",
     "img1": "https://avatars.mds.yandex.net/get-mpic/6303765/img_id2376637627791323314.png/orig",
     "img2": "https://avatars.mds.yandex.net/get-mpic/7665750/img_id4558657414201764458.png/orig",
@@ -111,7 +112,8 @@
     "img4": "https://avatars.mds.yandex.net/get-mpic/5289292/img_id1267699312210774916.jpeg/orig",
     "img5": "https://avatars.mds.yandex.net/get-mpic/5031100/img_id1531787146705721597.png/orig",
     "img6": "https://avatars.mds.yandex.net/get-mpic/7754338/img_id8815387042959697194.jpeg/orig",
-    "description": "Supercharged by M2 Pro or M2 Max, MacBook Pro takes its power and efficiency further than ever. It delivers exceptional performance whether it’s plugged in or not, and now has even longer battery life. Combined with a stunning Liquid Retina XDR display and all the ports you need — this is a pro laptop without equal."
+    "description": "Supercharged by M2 Pro or M2 Max, MacBook Pro takes its power and efficiency further than ever. It delivers exceptional performance whether it’s plugged in or not, and now has even longer battery life. Combined with a stunning Liquid Retina XDR display and all the ports you need — this is a pro laptop without equal.",
+    "selectApple": true
   },
   {
     "id": "0755ba",

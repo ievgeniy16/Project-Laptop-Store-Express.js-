@@ -213,12 +213,15 @@
     background-color: black;
     border: none;
     outline: none;
+
+    width: 130px;
 }
 .range_slider div input {
     font-family: Arial, Helvetica, sans-serif;
 }
 .range_slider div p {
     font-family: monospace;
+    padding-left: 3px;
 }
 
 
