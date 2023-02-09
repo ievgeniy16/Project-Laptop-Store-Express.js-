@@ -7,16 +7,18 @@
   - JavaScript
   - Express.JS
   - bcrypt (for hashing the password)
-  - nodemon (for starting server)
+  <!-- - nodemon (for starting server) -->
+  - [nodemon](https://nodemon.io/)
   - my simulated **DataBase** are JSON files
 
 ## Instructions
-
-
-
-
-
-
-
-
+- [x] 1.After forking and cloning, navigate to the repository in your command line and install the NPM packages:
+```
+    npm install
+```
+- [x] 2.After you have to go to the command line and write the following to start the server:
+```
+    nodemon  ||  nodemon index.js
+```
+- [x] 3.Once the server is running, go to http://localhost:3000 in your browser.
 
