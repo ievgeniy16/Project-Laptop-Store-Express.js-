@@ -3,12 +3,12 @@
 **Electro-Store** - this is application is an online store, where you can view the product catalog, create products, and edit, delete products if you own them.
 
 ## Built With 
-  - Handlebars (for templates)
+  - [Handlebars (for templates)](https://handlebarsjs.com/)
+  - CSS3
   - JavaScript
-  - Express.JS
+  - [Express.JS](https://expressjs.com/)
   - bcrypt (for hashing the password)
-  <!-- - nodemon (for starting server) -->
-  - [nodemon](https://nodemon.io/)
+  - [nodemon (for starting server)](https://nodemon.io/)
   - my simulated **DataBase** are JSON files
 
 ## Instructions
@@ -22,3 +22,4 @@
 ```
 - [x] 3.Once the server is running, go to http://localhost:3000 in your browser.
 
+<!-- --- -->
