@@ -270,7 +270,7 @@
     background-color: greenyellow;
 }
 
-.div_details_control  a:last-child {
+.div_details_control  #buyNowBtn {
     /* margin-top: 10px; */
     padding: 12px;
     background-color: red;
@@ -280,7 +280,7 @@
     bottom: 5px;
     margin-left: 5px;
 }
-.div_details_control  a:last-child:hover{
+.div_details_control  #buyNowBtn:hover {
     background-color: greenyellow;
     color: black;
     font-weight: bold;

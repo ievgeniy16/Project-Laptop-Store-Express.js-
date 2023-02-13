@@ -54,12 +54,12 @@ async function register(email, username, password) {
 async function login(email, password) {
     const user = data.find(u => u.email == email.trim());
     if (!user) {
-        throw new Error('Incorrect username or password');
+        throw new Error('Incorrect username or password!');
     }
 
     const passMatch = await bcrypt.compare(password.trim(), user.hashedPassword);
     if(passMatch == false) {
-        throw new Error('Incorrect username or password');
+        throw new Error('Incorrect username or password!');
     }
 
     const token = createSession(user);
