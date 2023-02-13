@@ -96,10 +96,13 @@ router.get('/details/:id', async (req, res) => {
     const product = await getById(req.params.id);
 
     if (product) {
-        if (product.owner == req.user.id) {
-            product.isOwner = true;
-        }
+        if (req.user != undefined) {
+            product.us = true;
 
+            if (product.owner == req.user.id) {
+                product.isOwner = true;
+            }
+        }
         res.render('details', {
             title: 'Details',
             product

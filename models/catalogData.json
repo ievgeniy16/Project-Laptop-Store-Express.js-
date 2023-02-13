@@ -16,7 +16,8 @@
     "img4": "https://avatars.mds.yandex.net/get-mpic/5418200/img_id5185931354745934488.png/orig",
     "img5": "https://avatars.mds.yandex.net/get-mpic/5319329/img_id7475526119887950789.png/orig",
     "img6": "https://avatars.mds.yandex.net/get-mpic/5235295/img_id6646942131914381102.png/orig",
-    "description": "Legion 7 Gen 6 (16 AMD) gaming notebook. Equipped with the latest generation AMD processors and NVIDIA ® GeForce RTX ™ graphics, this highest possible resolution Its higher 16:10 aspect ratio and refresh rates of up to 165 Hz put you in the  of the game You will enjoy an enlarged field of view and can fully immerse yourself in the game world."
+    "description": "Legion 7 Gen 6 (16 AMD) gaming notebook. Equipped with the latest generation AMD processors and NVIDIA ® GeForce RTX ™ graphics, this highest possible resolution Its higher 16:10 aspect ratio and refresh rates of up to 165 Hz put you in the  of the game You will enjoy an enlarged field of view and can fully immerse yourself in the game world.",
+    "us": true
   },
   {
     "id": "0313b0",
@@ -93,7 +94,8 @@
     "img4": "https://avatars.mds.yandex.net/get-marketpic/6112833/pic0821d98f9d3d330fd6405c0fff50eb94/orig",
     "img5": "https://avatars.mds.yandex.net/get-marketpic/5455004/picb36a3cf21987e370800913496914d3e3/orig",
     "img6": "https://avatars.mds.yandex.net/get-mpic/4776349/img_id1976274594687845962.jpeg/orig",
-    "description": "Unlock even more performance with intelligent technologies like AMD Smart Access Memory™ and SmartShift Max configured exclusively for AMD. Enjoy a new level of responsiveness with AMD Ryzen™ processors and AMD Radeon™ graphics."
+    "description": "Unlock even more performance with intelligent technologies like AMD Smart Access Memory™ and SmartShift Max configured exclusively for AMD. Enjoy a new level of responsiveness with AMD Ryzen™ processors and AMD Radeon™ graphics.",
+    "us": true
   },
   {
     "id": "0313b1",
@@ -155,7 +157,7 @@
   },
   {
     "id": "07af20",
-    "name": "Peter 2",
+    "name": "Peter 345",
     "display": "1",
     "processor": "1",
     "graphic": "1",
@@ -172,5 +174,25 @@
     "img6": "1",
     "description": "1",
     "owner": "19ec2fb9-c83d"
+  },
+  {
+    "id": "09168c",
+    "name": "my public",
+    "display": "1",
+    "processor": "1",
+    "graphic": "1",
+    "ramMemory": "1",
+    "totalCapacity": "1",
+    "operatingSystem": "1",
+    "price": 1,
+    "productCategory": "Others",
+    "img1": "1",
+    "img2": "1",
+    "img3": "1",
+    "img4": "1",
+    "img5": "1",
+    "img6": "1",
+    "description": "1",
+    "owner": "9a3f25ee-7524"
   }
 ]
