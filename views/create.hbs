@@ -3,26 +3,26 @@
     <form action="/create" method="post">
         <h3>Create a Laptop</h3>
 
-        {{#if error}}
+        {{#if errors}}
         <ul class="errorMessages">
-            {{#each error}}
+            {{#each errors}}
             <li><span>{{this}}: </span>are required!</li>
             {{/each}}
         </ul>
         {{/if}}
         
         <ul>
-            <li> <label>Product Name</label> <input type="text" name="name"> </li>
-            <li> <label>Display</label> <input type="text" name="display"> </li>
-            <li> <label>Processor</label> <input type="text" name="processor"> </li>
-            <li> <label>Graphic Card</label> <input type="text" name="graphic"> </li>
-            <li> <label>RAM size</label> <input type="text" name="ramMemory"> </li>
-            <li> <label>HDD/SDD Capacity</label> <input type="text" name="totalCapacity"> </li>
-            <li> <label>Operating System</label> <input type="text" name="operatingSystem"> </li>
-            <li> <label>Price</label> <input type="number" name="price"> </li>
+            <li> <label>Product Name</label> <input type="text" name="name" value="{{body.name}}"> </li>
+            <li> <label>Display</label> <input type="text" name="display" value="{{body.display}}"> </li>
+            <li> <label>Processor</label> <input type="text" name="processor" value="{{body.processor}}"> </li>
+            <li> <label>Graphic Card</label> <input type="text" name="graphic" value="{{body.graphic}}"> </li>
+            <li> <label>RAM size</label> <input type="text" name="ramMemory" value="{{body.ramMemory}}"> </li>
+            <li> <label>HDD/SDD Capacity</label> <input type="text" name="totalCapacity" value="{{body.totalCapacity}}"> </li>
+            <li> <label>Operating System</label> <input type="text" name="operatingSystem" value="{{body.operatingSystem}}"> </li>
+            <li> <label>Price</label> <input type="number" name="price" value="{{body.price}}"> </li>
             <li>
                 <label>Product Category</label>
-                <select class="custom_select" name="productCategory" size="1">
+                <select id="selectValue" class="custom_select" name="productCategory">
                     <option value="" hidden>Selected value...</option>
                     <option value="Apple">Apple</option>
                     <option value="Asus">Asus</option>
@@ -30,22 +30,25 @@
                     <option value="MSI">MSI</option>
                     <option value="Others">Others</option>
                 </select>
+                <script>
+                    document.getElementById('selectValue').value = "{{body.productCategory}}";
+                </script>
             </li>
             <li class="select-input-imgs">
                 <label for="">Image of Product</label>
                 <ul>
                     <!-- <input type="file" accept="image/*" multiple name="fileUpload[]" size="50"> -->
-                    <li><input type="text" placeholder="Image URL" name="img1"></li>
-                    <li><input type="text" placeholder="Image URL" name="img2"></li>
-                    <li><input type="text" placeholder="Image URL" name="img3"></li>
-                    <li><input type="text" placeholder="Image URL" name="img4"></li>
-                    <li><input type="text" placeholder="Image URL" name="img5"></li>
-                    <li><input type="text" placeholder="Image URL" name="img6"></li>
+                    <li><input type="text" placeholder="Image URL" name="img1" value="{{body.img1}}"></li>
+                    <li><input type="text" placeholder="Image URL" name="img2" value="{{body.img2}}"></li>
+                    <li><input type="text" placeholder="Image URL" name="img3" value="{{body.img3}}"></li>
+                    <li><input type="text" placeholder="Image URL" name="img4" value="{{body.img4}}"></li>
+                    <li><input type="text" placeholder="Image URL" name="img5" value="{{body.img5}}"></li>
+                    <li><input type="text" placeholder="Image URL" name="img6" value="{{body.img6}}"></li>
                 </ul>
             </li>
             <li>
                 <label>Description</label>
-                <textarea name="description" id="" cols="30" rows="10"></textarea>
+                <textarea name="description" id="" cols="30" rows="10">{{body.description}}</textarea>
             </li>
         </ul>
 

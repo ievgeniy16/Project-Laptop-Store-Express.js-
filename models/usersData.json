@@ -1,8 +1,14 @@
 [
-    {
-        "email":"peter@abv.bg",
-        "username":"Peter",
-        "password":"12345",
-        "ownerId":"11111"
-    }
+  {
+    "id": "9a3f25ee-7524",
+    "email": "jokert3@mail.ru",
+    "username": "Evgeniy",
+    "hashedPassword": "$2b$10$FebbFAgn5r325UgyYokiWeMW8G.ge8sFeiw96PmOyLbeCwjjJbLdC"
+  },
+  {
+    "id": "19ec2fb9-c83d",
+    "email": "peter@abv.bg",
+    "username": "Peter",
+    "hashedPassword": "$2b$10$6fG37wwozLkolCYdbIsYnuB2IWW0d1nE5CHPj3U8zlptrwVPwfkjK"
+  }
 ]

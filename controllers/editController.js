@@ -6,12 +6,21 @@ router.get('/:id', async (req, res) => {
     const id = req.params.id;
     const product = await getById(id);
     product[`select${product.productCategory}`] = true;
-
+    // console.log('productId', product.owner);
+    // console.log('userId', req.user.id);
+    if (req.user == undefined) {
+        return res.redirect('/auth/login');
+    }    
+    if (req.user.id != product.owner) {
+        return res.redirect('/auth/login');
+    }
     res.render('edit', {
         title: 'Edit',
         product
-    })
+    });
 });
+
+
 
 router.post('/:id', async (req, res) => {
     const id = req.params.id;
@@ -33,14 +42,17 @@ router.post('/:id', async (req, res) => {
         img4: req.body.img4,
         img5: req.body.img5,
         img6: req.body.img6,
-        description: req.body.description
+        description: req.body.description,
+        owner: req.user.id
     };
 
     try {
         await update(id, product);
         res.redirect('/catalog/details/' + id);
     } catch (err) {
-        res.redirect('404')
+        res.render('edit'), {
+            title: 'Edit',
+        }
     }
 });
 

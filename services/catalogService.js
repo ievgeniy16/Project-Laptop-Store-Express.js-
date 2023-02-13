@@ -3,7 +3,7 @@ const fs = require('fs');
 const filename = './models/catalogData.json';
 const data = JSON.parse(fs.readFileSync(filename));
 
-// для сохранения данных при create/update/delete, файл перезаписывается, иначе при restarte server все терялось
+// record file for create/update/delete
 async function persist() {
     return new Promise((resolve, reject) => {
         fs.writeFile(filename, JSON.stringify(data, null, 2), (err) => {
@@ -16,9 +16,7 @@ async function persist() {
     });
 }
 
-// function getAll() {
-//     return data;
-// }
+
 function getAll(search, fromPrice, toPrice) {
     return data
         .filter(p => p.name.toLowerCase().includes(search.toLowerCase()))
@@ -57,11 +55,11 @@ function getOthers(fromPrice, toPrice) {
 }
 
 
-function getById(id) {
+async function getById(id) {
     return data.find(i => i.id == id);
 }
 
-async function create(productData) {
+async function create(productData, ownerId) {
     const product = {
         id: createId(),
         name: productData.name,
@@ -79,7 +77,8 @@ async function create(productData) {
         img4: productData.img4,
         img5: productData.img5,
         img6: productData.img6,
-        description: productData.description
+        description: productData.description,
+        owner: ownerId
     };
 
     const missing = Object.entries(product).filter(([k, v]) => !v);
@@ -101,6 +100,7 @@ async function update(id, product) {
             // data.push(product);
         }
     }
+
     await persist();
 }
 

@@ -4,14 +4,6 @@
     <form action="/catalog/edit/{{id}}" method="post">
         <h3>Edit a Laptop</h3>
 
-        {{#if error}}
-        <ul class="errorMessages">
-            {{#each error}}
-            <li><span>{{this}}: </span>are required!</li>
-            {{/each}}
-        </ul>
-        {{/if}}
-
         <ul>
             <li> <label>Product Name</label> <input type="text" name="name" value="{{name}}"></li>
             <li> <label>Display</label> <input type="text" name="display" value="{{display}}"></li>

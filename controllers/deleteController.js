@@ -8,6 +8,13 @@ router.get('/:id', async (req, res) => {
     const product = await getById(id);
     product[`select${product.productCategory}`] = true;
 
+    if (req.user == undefined) {
+        return res.redirect('/auth/login');
+    }    
+    if (req.user.id != product.owner) {
+        return res.redirect('/auth/login');
+    }
+
     res.render('delete', {
         title: 'Delete Page',
         product

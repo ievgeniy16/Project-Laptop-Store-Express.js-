@@ -1,11 +1,19 @@
 <div class="content__login">
 
+    {{#if errors}}
+    <div>
+        {{#each errors}}
+        <p>{{this}}</p>
+        {{/each}}
+    </div>
+    {{/if}}
+
     <form action="#" method="post">
         <p class="heading">Login</p>
         <div class="box">
             <p>Email</p>
             <div>
-                <input type="text" placeholder="Enter your email" name="email">
+                <input type="text" placeholder="Enter your email" name="email" value="{{body.email}}">
             </div>
         </div>
         <div class="box">
@@ -15,7 +23,7 @@
             </div>
         </div>
         <button class="loginBtn">Login</button>
-        <p class="text">Don't have an account? <a href="/auth/register.html">Sign up</a></p>
+        <p class="text">Don't have an account? <a href="/auth/register">Sign up</a></p>
     </form>
 
 </div>

@@ -1,6 +1,6 @@
 # Electro-Store(Multi_Page_Application with Express.JS). 
 
-**Electro-Store** - this is application is an online store, where you can view the product catalog, create products, and edit, delete products if you own them.
+**Electro-Store** - this is application is an online store, where you can view the product catalog, get product, create products, and edit, delete products if you own them.
 
 ## Built With 
   - [Handlebars (for templates)](https://handlebarsjs.com/)
@@ -10,6 +10,9 @@
   - bcrypt (for hashing the password)
   - [nodemon (for starting server)](https://nodemon.io/)
   - my simulated **DataBase** are JSON files
+  - cookie-parser
+  - jsonwebtoken
+  - express-session
 
 ## Instructions
 - [x] 1.After forking and cloning, navigate to the repository in your command line and install the NPM packages:

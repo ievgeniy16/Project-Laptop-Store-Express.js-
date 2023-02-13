@@ -22,7 +22,13 @@
             <div class="logo">
                 <h1><a href="/">Laptop-Store</a></h1>
                 <div class="greeting">
-                    <p>Welcome, <span id="username">Evgeniy</span></p>
+                    <p>Welcome, <span id="username">
+                        {{#if username}}
+                        {{username}}
+                        {{else}}
+                        <span>guest</span>
+                        {{/if}}
+                        </span></p>
                     <img src="/static/img/home-page-img/logo_user.png">
                 </div>
             </div>
@@ -79,12 +85,14 @@
                         }
                         dropdown()
                     </script>
-
+                    {{#if username}}
                     <li><a href="/create">Create</a></li>
+                    <li><a href="/my-page">My Page</a></li>
+                    <li><a href="/auth/logout">Logout</a></li>
+                    {{else}}
                     <li><a href="/auth/login">Login</a></li>
                     <li><a href="/auth/register">Register</a></li>
-                    <li><a href="#">Logout</a></li>
-                    <li><a href="/my-page">My Page</a></li>
+                    {{/if}}
                 </ul>
 
                 <div class="visible_menu">
@@ -101,6 +109,7 @@
                     </div>
                 </div>
 
+                {{#if username}}
                 <div class="addcart">
                     <a href="/cart">
                         <img src="/static/img/home-page-img/add_cart.png">
@@ -109,8 +118,10 @@
                         <span>0</span>
                     </div>
                 </div>
+                {{/if}}
             </div>
         </div>
+
 
 
         <div class="content_back_color">

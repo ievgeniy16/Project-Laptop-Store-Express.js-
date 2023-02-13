@@ -92,11 +92,14 @@ router.get('/others', (req, res) => {
 
 
 
-router.get('/details/:id', (req, res) => {
-    const productId = req.params.id;
-    const product = getById(productId);
+router.get('/details/:id', async (req, res) => {
+    const product = await getById(req.params.id);
 
     if (product) {
+        if (product.owner == req.user.id) {
+            product.isOwner = true;
+        }
+
         res.render('details', {
             title: 'Details',
             product
