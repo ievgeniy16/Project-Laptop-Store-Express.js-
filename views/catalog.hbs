@@ -51,15 +51,13 @@
             <hr>
         </div>
         <div class="pagination">
+            {{#if viewPage}}
             <div>
-                <a href="#" class="pagination_previous">&laquo; Previous</a>
-                <a href="#" class="pagination_a pagination_active">1</a>
-                <a href="#" class="pagination_a">2</a>
-                <a href="#" class="pagination_a">3</a>
-                <a href="#" class="pagination_a">4</a>
-                <a href="#" class="pagination_a">5</a>
-                <a href="#" class="pagination_next">Next &raquo;</a>
+                <a href="{{#if prevFlag}}?previous=1{{else}}javascript:void(0){{/if}}" class="pagination_previous">&laquo; Previous</a>
+                <a href="javascript:void(0)" class="pagination_a pagination_active">{{page}}</a>
+                <a href="{{#if nextFlag}}?next=1{{else}}javascript:void(0){{/if}}" class="pagination_next">Next &raquo;</a>
             </div>
+            {{/if}}
         </div>
 
 
@@ -107,7 +105,7 @@
                     <span>{{price}}.00 €</span>
                     <div>
                         <a href="/catalog/details/{{id}}">Details</a>
-                        <a href="/cart">Add to Cart</a>
+                        {{!-- <a href="/cart">Add to Cart</a> --}}
                     </div>
                 </div>
             </div>
@@ -115,15 +113,13 @@
 
         </div>
         <div class="pagination">
+            {{#if viewPage}}
             <div>
-                <a href="#" class="pagination_previous">&laquo; Previous</a>
-                <a href="#" class="pagination_a pagination_active">1</a>
-                <a href="#" class="pagination_a">2</a>
-                <a href="#" class="pagination_a">3</a>
-                <a href="#" class="pagination_a">4</a>
-                <a href="#" class="pagination_a">5</a>
-                <a href="#" class="pagination_next">Next &raquo;</a>
+                <a href="{{#if prevFlag}}?previous=1{{else}}javascript:void(0){{/if}}" class="pagination_previous">&laquo; Previous</a>
+                <a href="javascript:void(0)" class="pagination_a pagination_active">{{page}}</a>
+                <a href="{{#if nextFlag}}?next=1{{else}}javascript:void(0){{/if}}" class="pagination_next">Next &raquo;</a>
             </div>
+            {{/if}}
         </div>
 
     </div>

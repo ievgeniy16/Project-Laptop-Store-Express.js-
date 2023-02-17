@@ -153,11 +153,12 @@
     "img4": "https://cdn.ozone.bg/media/catalog/product/cache/1/image/a4e40ebdc3e371adff845072e1c73f37/g/e/dd920aea1fd171b03d9f831aa5b67d15/geyming-laptop-gigabyte---aero-15-kd--156---4k--i7--rtx3060--cheren-33.jpg",
     "img5": "https://ardes.bg/uploads/original/gigabyte-aero-15-oled-yd-xd-kd-intel-11th-gen-324950.jpg",
     "img6": "https://ardes.bg/uploads/original/gigabyte-aero-15-oled-yd-xd-kd-intel-11th-gen-324954.jpg",
-    "description": "The all-new AERO 15 OLED creator laptop has a performance upgrade with the 11th Gen Intel® Core™ H-series processor. The elegant and powerful design is paired with an unparalleled 4K HDR visual experience, bringing users a faster, smoother, and more immersive creative journey."
+    "description": "The all-new AERO 15 OLED creator laptop has a performance upgrade with the 11th Gen Intel® Core™ H-series processor. The elegant and powerful design is paired with an unparalleled 4K HDR visual experience, bringing users a faster, smoother, and more immersive creative journey.",
+    "us": true
   },
   {
     "id": "07af20",
-    "name": "Peter 345",
+    "name": "Peter 3457",
     "display": "1",
     "processor": "1",
     "graphic": "1",
@@ -194,5 +195,25 @@
     "img6": "1",
     "description": "1",
     "owner": "9a3f25ee-7524"
+  },
+  {
+    "id": "08ee6c",
+    "name": "1",
+    "display": "1",
+    "processor": "1",
+    "graphic": "1",
+    "ramMemory": "1",
+    "totalCapacity": "1",
+    "operatingSystem": "16GB",
+    "price": 1,
+    "productCategory": "Apple",
+    "img1": "1",
+    "img2": "1",
+    "img3": "1",
+    "img4": "1",
+    "img5": "1",
+    "img6": "1",
+    "description": "1",
+    "owner": "19ec2fb9-c83d"
   }
 ]

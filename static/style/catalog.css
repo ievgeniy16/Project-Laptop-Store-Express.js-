@@ -52,8 +52,9 @@
 }
 .pagination div {
     height: 40px;
-    display: table-cell; 
-    vertical-align: middle;
+    /* display: table-cell;  */
+    /* vertical-align: middle; */
+    text-align: center;
 }
 .pagination a {
     text-decoration: none;

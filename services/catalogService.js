@@ -17,6 +17,10 @@ async function persist() {
 }
 
 
+function getPagination() {
+    return data;
+}
+
 function getAll(search, fromPrice, toPrice) {
     return data
         .filter(p => p.name.toLowerCase().includes(search.toLowerCase()))
@@ -131,5 +135,6 @@ module.exports = {
     getById,
     create,
     update,
-    deleteById
+    deleteById,
+    getPagination
 };
