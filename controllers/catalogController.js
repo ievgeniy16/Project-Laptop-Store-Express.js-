@@ -5,11 +5,11 @@ const router = require('express').Router();
 
 //Catalog + Search + Pagination
 let page = 0;
-router.get('/all', (req, res) => {
+router.get('/all', async (req, res) => {
     const search = req.query.search || '';
     const fromPrice = Number(req.query.fromPrice) || 0;
     const toPrice = Number(req.query.toPrice) || 9999;
-    let catalog = getAll(search, fromPrice, toPrice);
+    let catalog = await getAll(search, fromPrice, toPrice);
 
     let limit = 3;
     let startIndex;
@@ -40,11 +40,12 @@ router.get('/all', (req, res) => {
             nextFlag = false;
         }
     }
-    if(req.query.previous || req.query.next || req.url == '/all') {
+    if (req.query.previous || req.query.next || req.url == '/all') {
         viewPage = true;
     }
-    
-    catalog = getAll(search, fromPrice, toPrice).slice(startIndex, endIndex);
+
+    catalog = catalog.slice(startIndex, endIndex);
+    // catalog = await getAll(search, fromPrice, toPrice).slice(startIndex, endIndex);
 
     res.render('catalog', {
         title: 'Catalog / All',
@@ -62,11 +63,11 @@ router.get('/all', (req, res) => {
 
 
 
-router.get('/apple', (req, res) => {
+router.get('/apple', async (req, res) => {
     const fromPrice = Number(req.query.fromPrice) || 0;
     const toPrice = Number(req.query.toPrice) || 9999;
 
-    const catalog = getApple(fromPrice, toPrice);
+    const catalog = await getApple(fromPrice, toPrice);
 
     res.render('catalog', {
         title: 'Catalog / Apple',
@@ -76,11 +77,11 @@ router.get('/apple', (req, res) => {
     });
 });
 
-router.get('/asus', (req, res) => {
+router.get('/asus', async (req, res) => {
     const fromPrice = Number(req.query.fromPrice) || 0;
     const toPrice = Number(req.query.toPrice) || 9999;
 
-    const catalog = getAsus(fromPrice, toPrice);
+    const catalog = await getAsus(fromPrice, toPrice);
 
     res.render('catalog', {
         title: 'Catalog / Asus',
@@ -90,11 +91,11 @@ router.get('/asus', (req, res) => {
     });
 });
 
-router.get('/lenovo', (req, res) => {
+router.get('/lenovo', async (req, res) => {
     const fromPrice = Number(req.query.fromPrice) || 0;
     const toPrice = Number(req.query.toPrice) || 9999;
 
-    const catalog = getLenovo(fromPrice, toPrice);
+    const catalog = await getLenovo(fromPrice, toPrice);
 
     res.render('catalog', {
         title: 'Catalog / Lenovo',
@@ -104,11 +105,11 @@ router.get('/lenovo', (req, res) => {
     });
 });
 
-router.get('/msi', (req, res) => {
+router.get('/msi', async (req, res) => {
     const fromPrice = Number(req.query.fromPrice) || 0;
     const toPrice = Number(req.query.toPrice) || 9999;
 
-    const catalog = getMSI(fromPrice, toPrice);
+    const catalog = await getMSI(fromPrice, toPrice);
 
     res.render('catalog', {
         title: 'Catalog / MSI',
@@ -118,11 +119,11 @@ router.get('/msi', (req, res) => {
     });
 });
 
-router.get('/others', (req, res) => {
+router.get('/others', async (req, res) => {
     const fromPrice = Number(req.query.fromPrice) || 0;
     const toPrice = Number(req.query.toPrice) || 9999;
 
-    const catalog = getOthers(fromPrice, toPrice);
+    const catalog = await getOthers(fromPrice, toPrice);
 
     res.render('catalog', {
         title: 'Catalog / Others',
@@ -139,13 +140,21 @@ router.get('/details/:id', async (req, res) => {
     const product = await getById(req.params.id);
 
     if (product) {
+        // console.log(req.user);
         if (req.user != undefined) {
             product.us = true;
 
             if (product.owner == req.user.id) {
+                // console.log('product.owner', product.owner);
+                // console.log('req.user.id', req.user.id);
                 product.isOwner = true;
+            } else {
+                product.isOwner = false;
             }
+        } else {
+            product.us = false;
         }
+
         res.render('details', {
             title: 'Details',
             product

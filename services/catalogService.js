@@ -17,42 +17,38 @@ async function persist() {
 }
 
 
-function getPagination() {
-    return data;
-}
-
-function getAll(search, fromPrice, toPrice) {
+async function getAll(search, fromPrice, toPrice) {
     return data
         .filter(p => p.name.toLowerCase().includes(search.toLowerCase()))
         .filter(p => p.price >= fromPrice && p.price <= toPrice)
         .sort((a, b) => a.name.localeCompare(b.name));
 }
 
-function getApple(fromPrice, toPrice) {
+async function getApple(fromPrice, toPrice) {
     return data
         .filter(p => p.productCategory == 'Apple')
         .filter(p => p.price >= fromPrice && p.price <= toPrice);
 }
 
-function getAsus(fromPrice, toPrice) {
+async function getAsus(fromPrice, toPrice) {
     return data
         .filter(p => p.productCategory == 'Asus')
         .filter(p => p.price >= fromPrice && p.price <= toPrice);
 }
 
-function getLenovo(fromPrice, toPrice) {
+async function getLenovo(fromPrice, toPrice) {
     return data
         .filter(p => p.productCategory == 'Lenovo')
         .filter(p => p.price >= fromPrice && p.price <= toPrice);
 }
 
-function getMSI(fromPrice, toPrice) {
+async function getMSI(fromPrice, toPrice) {
     return data
         .filter(p => p.productCategory == 'MSI')
         .filter(p => p.price >= fromPrice && p.price <= toPrice);
 }
 
-function getOthers(fromPrice, toPrice) {
+async function getOthers(fromPrice, toPrice) {
     return data
         .filter(p => p.productCategory == 'Others')
         .filter(p => p.price >= fromPrice && p.price <= toPrice);
@@ -135,6 +131,5 @@ module.exports = {
     getById,
     create,
     update,
-    deleteById,
-    getPagination
+    deleteById
 };
