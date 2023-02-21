@@ -21,7 +21,7 @@
 ```
 - [x] 2.After you have to go to the command line and write the following to start the server:
 ```
-    nodemon  ||  nodemon index.js
+    npm start || nodemon || nodemon index.js
 ```
 - [x] 3.Once the server is running, go to http://localhost:3000 in your browser.
 

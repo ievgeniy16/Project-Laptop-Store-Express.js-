@@ -56,8 +56,7 @@
     "img5": "https://avatars.mds.yandex.net/get-mpic/5236535/img_id2879085173202956335.jpeg/orig",
     "img6": "https://avatars.mds.yandex.net/get-mpic/1081556/img_id280627304957195807.jpeg/orig",
     "description": "Define the look and feel of the new 2022 Asus. A mecha-inspired aluminum top cover is available in Off Black or Moonlight White. This modern design is at home, at LAN parties and offices alike, closing down to a streamlined 19.95mm thin for portability between both. Super-narrow bezels continue the theme, maximizing screen space with minimal distraction. The dashing looks don’t compromise a classic TUF core that meets military-grade MIL-STD standards.",
-    "selectAsus": true,
-    "us": false
+    "selectAsus": true
   },
   {
     "id": "x31xb1",
@@ -117,7 +116,8 @@
     "img6": "https://avatars.mds.yandex.net/get-mpic/7754338/img_id8815387042959697194.jpeg/orig",
     "description": "Supercharged by M2 Pro or M2 Max, MacBook Pro takes its power and efficiency further than ever. It delivers exceptional performance whether it’s plugged in or not, and now has even longer battery life. Combined with a stunning Liquid Retina XDR display and all the ports you need — this is a pro laptop without equal.",
     "selectApple": true,
-    "us": false
+    "us": true,
+    "isOwner": false
   },
   {
     "id": "0755ba",
@@ -156,11 +156,11 @@
     "img5": "https://ardes.bg/uploads/original/gigabyte-aero-15-oled-yd-xd-kd-intel-11th-gen-324950.jpg",
     "img6": "https://ardes.bg/uploads/original/gigabyte-aero-15-oled-yd-xd-kd-intel-11th-gen-324954.jpg",
     "description": "The all-new AERO 15 OLED creator laptop has a performance upgrade with the 11th Gen Intel® Core™ H-series processor. The elegant and powerful design is paired with an unparalleled 4K HDR visual experience, bringing users a faster, smoother, and more immersive creative journey.",
-    "us": false
+    "us": true
   },
   {
     "id": "07af20",
-    "name": "Peter 3457ds",
+    "name": "Peter 34579",
     "display": "1",
     "processor": "1",
     "graphic": "1",
@@ -176,12 +176,11 @@
     "img5": "1",
     "img6": "1",
     "description": "1",
-    "owner": "19ec2fb9-c83d",
-    "selectAsus": true
+    "owner": "19ec2fb9-c83d"
   },
   {
     "id": "09168c",
-    "name": "Evgeniy ",
+    "name": "my public",
     "display": "1",
     "processor": "1",
     "graphic": "1",
@@ -197,6 +196,8 @@
     "img5": "1",
     "img6": "1",
     "description": "1",
-    "owner": "9a3f25ee-7524"
+    "owner": "9a3f25ee-7524",
+    "us": true,
+    "isOwner": true
   }
 ]

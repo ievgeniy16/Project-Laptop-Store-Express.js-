@@ -1,4 +1,4 @@
-{{#if carts}}
+{{#if product}}
 
 <section class="section-cart">
     <header class="section-cart__header">
@@ -15,13 +15,11 @@
                     <div class="cart-header__price">Price</div>
                 </header>
                 <div class="products">
-                    {{#each cards}}
+                    {{!-- {{#each cards}} --}}
+                    {{#with product}}
                     <section class="product">
-                        <div class="product__img">
-                            <img
-                                src="https://s13emagst.akamaized.net/products/33874/33873196/images/res_2ce18bde5ec79adc307a8d4fc03e40a3.jpg?width=720&height=720&hash=1840B87A83D2860FE66FB10372E0E50B">
-                        </div>
-                        <div class="product__title">Apple MacBook Air 13</div>
+                        <div class="product__img"> <img src="{{img1}}"> </div>
+                        <div class="product__title">{{name}}</div>
                         <div class="product__count">
                             <div class="count">
                                 <div class="count__box">
@@ -37,33 +35,82 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="product__price">3000lv</div>
+
+                        <div class="product__price">{{price}}</div>
                         <div class="product__button">
-                            <button type="button">
+                            <button type="button" id="closeCart">
                                 <i class="fa fa-window-close" aria-hidden="true"></i>
                             </button>
                         </div>
                     </section>
-                    {{/each}}
+                    {{/with}}
+                    {{!-- {{/each}} --}}
                 </div>
                 <footer class="cart-footer">
-                    <div class="cart-footer__count">3 counters</div>
-                    <div class="cart-footer__sum">124.00 euro</div>
+                    <div class="cart-footer__count"></div>
+                    <div class="cart-footer__sum"></div>
                 </footer>
             </section>
         </div>
     </div>
 </section>
 
-{{else}}
-
-<section class="section-cart__empty">
+<section id="reserveCartEmpty" class="section-cart__empty" style="display:none">
     <div class="cart__empty">
         <img src="https://i.imgur.com/dCdflKN.png">
         <h3>Your Cart is Empty</h3>
         <h4>Add something to make me happy :)</h4>
-        <a href="/catalog">continue shopping</a>
+        <a href="/catalog/all">continue shopping</a>
+    </div>
+</section>
+
+{{else}}
+
+<section class="section-cart__empty" id="12345">
+    <div class="cart__empty">
+        <img src="https://i.imgur.com/dCdflKN.png">
+        <h3>Your Cart is Empty</h3>
+        <h4>Add something to make me happy :)</h4>
+        <a href="/catalog/all">continue shopping</a>
     </div>
 </section>
 
 {{/if}}
+
+<script>
+    let count = 1;
+    let price = document.querySelector('.product__price').textContent;
+    let counter = document.querySelector('.cart-footer__count');
+    let sum = document.querySelector('.cart-footer__sum');
+    counter.textContent = `${count} counters`;
+    sum.textContent = `${(count * price).toFixed(2)} euro`;
+    document.getElementById('cartCounter').textContent = count;
+
+    document.querySelector('.count__up').addEventListener('click', () => {
+        count -= 1;
+        if (count < 1) {
+            count = 1;
+        }
+        document.querySelector('.count__input').value = count;
+        counter.textContent = `${count} counters`;
+        sum.textContent = `${(count * price).toFixed(2)} euro`;
+        document.getElementById('cartCounter').textContent = count;
+    });
+
+    document.querySelector('.count__down').addEventListener('click', () => {
+        count += 1;
+        if (count > 100) {
+            count = 100;
+        }
+        document.querySelector('.count__input').value = count;
+        counter.textContent = `${count} counters`;
+        sum.textContent = `${(count * price).toFixed(2)} euro`;
+        document.getElementById('cartCounter').textContent = count;
+    });
+
+    document.getElementById('closeCart').addEventListener('click', () => {
+        document.querySelector('.section-cart').style.display = 'none';
+        document.querySelector('#reserveCartEmpty').style.display = 'block';
+        document.getElementById('cartCounter').textContent = 0;
+    });
+</script>

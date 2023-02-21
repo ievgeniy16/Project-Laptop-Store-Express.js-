@@ -1,14 +1,4 @@
 <div class="sidebar_content">
-    {{!-- <div class="search_form">
-        <h2>Search</h2>
-        <form method="get">
-            <input name="search" placeholder="Enter product name..." value="{{search}}">
-            <button type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-        </form>
-    </div> --}}
-
     <div class="laptops_rating">
         <h2>Laptops Rating</h2>
         <ul>
@@ -69,39 +59,3 @@
         <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
 </div>
-
-<script>
-    function carousel() {
-        let slideIndex = 1;
-        shwowSlides(slideIndex);
-
-        document.querySelector('.prev').addEventListener('click', () => {
-            shwowSlides(slideIndex += -1)
-        });
-        document.querySelector('.next').addEventListener('click', () => {
-            shwowSlides(slideIndex += 1)
-        });
-
-        setInterval(function () {
-            shwowSlides(slideIndex += 1)
-        }, 3000);
-
-        function shwowSlides(n) {
-            let slides = document.getElementsByClassName('img_slade');
-
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = slides.length;
-            }
-
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
-            }
-
-            slides[slideIndex - 1].style.display = 'block';
-        }
-    }
-    carousel();
-</script>

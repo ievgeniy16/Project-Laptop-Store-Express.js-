@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="/static/style/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    {{!-- Express не рабоатет с DOM документами нужно чрез script писать js!
-    <script defer src="../../src/animation/clickDetailsPhoto.js"></script> --}}
+    {{!-- Clients code Frond-end --}}
+    <script src="/static/js/app.js" type="module"></script>
 </head>
 
 
@@ -23,11 +23,11 @@
                 <h1><a href="/">Laptop-Store</a></h1>
                 <div class="greeting">
                     <p>Welcome, <span id="username">
-                        {{#if username}}
-                        {{username}}
-                        {{else}}
-                        <span>guest</span>
-                        {{/if}}
+                            {{#if username}}
+                            {{username}}
+                            {{else}}
+                            <span>guest</span>
+                            {{/if}}
                         </span></p>
                     <img src="/static/img/home-page-img/logo_user.png">
                 </div>
@@ -41,50 +41,6 @@
                             <span class="down">&#x25BC;</span>
                             <span class="up">&#x25B2;</span>
                         </a></li>
-                    <script>
-                        function dropdown() {
-                            let up = document.querySelector('.up');
-                            up = up.style.display = 'none';
-
-                            function offScrollTo() {
-                                window.scrollTo(0, 0);
-                            }
-
-                            document.getElementById('clickMenu').addEventListener('click', () => {
-                                if (document.querySelector('.up').style.display === 'none') {
-                                    document.querySelector('.up').style.display = 'inline-block';
-                                    document.querySelector('.down').style.display = 'none';
-                                    document.querySelector('.visible_menu').style.display = 'block';
-                                    
-                                    window.addEventListener('scroll', offScrollTo);
-
-                                } else {
-                                    document.querySelector('.up').style.display = 'none';
-                                    document.querySelector('.down').style.display = 'inline-block';
-                                    document.querySelector('.visible_menu').style.display = 'none';
-
-                                    window.removeEventListener('scroll', offScrollTo);
-                                }
-                            });
-
-                            let up1 = document.querySelector('.up1');
-                            up1 = up1.style.display = 'none';
-
-                            document.getElementById('clickMenu1').addEventListener('click', () => {
-                                if (document.querySelector('.up1').style.display === 'none') {
-                                    document.querySelector('.up1').style.display = 'inline-block';
-                                    document.querySelector('.down1').style.display = 'none';
-                                    document.querySelector('.visible_menu1').style.display = 'block';
-                                } else {
-                                    document.querySelector('.up1').style.display = 'none';
-                                    document.querySelector('.down1').style.display = 'inline-block';
-                                    document.querySelector('.visible_menu1').style.display = 'none';
-                                }
-                            });
-
-                        }
-                        dropdown()
-                    </script>
                     {{#if username}}
                     <li><a href="/create">Create</a></li>
                     <li><a href="/my-page">My Page</a></li>
@@ -115,7 +71,7 @@
                         <img src="/static/img/home-page-img/add_cart.png">
                     </a>
                     <div class="counter">
-                        <span>0</span>
+                        <span id="cartCounter">0</span>
                     </div>
                 </div>
                 {{/if}}
@@ -136,20 +92,6 @@
 
 
             </div>
-
-            <script>
-                function topFunction() {
-                    document.documentElement.scrollTop = 0;
-                }
-                document.addEventListener('scroll', () => {
-                    if (document.documentElement.scrollTop > 200) {
-                        document.getElementById('myBtn').style.display = 'block';
-                    } else {
-                        document.getElementById('myBtn').style.display = 'none';
-                    }
-                });
-            </script>
-
         </div>
 
 
@@ -173,6 +115,5 @@
     </div>
 
 </body>
-
 
 </html>

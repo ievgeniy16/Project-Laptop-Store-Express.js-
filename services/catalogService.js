@@ -59,6 +59,7 @@ async function getById(id) {
     return data.find(i => i.id == id);
 }
 
+
 async function create(productData, ownerId) {
     const product = {
         id: createId(),
