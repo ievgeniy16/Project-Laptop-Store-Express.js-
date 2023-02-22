@@ -167,13 +167,27 @@ body .cart {
     font-size: 18px;
     line-height: 1.2;
 
-    height: 60px;
+    height: 100px;
 }
-
 .cart-footer__count {
     grid-column-start: 2;
 }
 
+.cart-footer__checkout {
+    grid-column-start: 3;
+    margin-top: 20px;
+}
+.cart-footer__checkout a {
+    text-decoration: none;
+    border: 1px solid blue;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    padding: 5px 9px;
+}
+.cart-footer__checkout a:hover {
+    color: red;
+}
 
 
 /* EMPTY CART */
