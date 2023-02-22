@@ -60,6 +60,11 @@ async function getById(id) {
 }
 
 
+async function myPublication(owner) {
+    return data.filter(p => p.owner == owner);
+}
+
+
 async function create(productData, ownerId) {
     const product = {
         id: createId(),
@@ -132,5 +137,6 @@ module.exports = {
     getById,
     create,
     update,
-    deleteById
+    deleteById,
+    myPublication
 };

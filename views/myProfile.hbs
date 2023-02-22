@@ -1,0 +1,39 @@
+<section id="viewhotelDetails">
+    <div class="profile"><img src="../static/img/home-page-img/logo_user.png" alt="default user">
+        <h3>User Info:</h3>
+        <div class="flex">
+            <p>Username: </p>
+            <p>{{username}}</p>
+        </div>
+        <div class="flex">
+            <p>Email: </p>
+            <p>{{email}}</p>
+        </div>
+        <div class="flex">
+            <p>My publication count: </p>
+            <p>
+                <span>{{count}}</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="user-profile-page" class="user-profile">
+    <h1 id="user-listings-title">User Memes</h1>
+
+    <div class="user-product-listings">
+        {{#if catalog}}
+        {{#each catalog}}
+        <div class="user-product">
+            <p class="user-product-title">{{name}}</p>
+            <img class="userProfileImage" src="{{img1}}">
+            <a class="user-product-button" href="/catalog/details/{{id}}">Details</a>
+        </div>
+        {{/each}}
+        {{else}}
+        <p class="no-product">No memes in database.</p>
+        {{/if}}
+
+    </div>
+
+</section>

@@ -13,6 +13,7 @@ module.exports = () => (req, res, next) => {
             req.user = userToken;
             // начин да вкарваме нещо в глобалния контекст, само чрез res.locals и име на променлива
             res.locals.username = userToken.username;
+            res.locals.email = userToken.email;
         } catch (err) {
             // console.log('Invalid token');
             res.clearCookie('token');

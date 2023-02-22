@@ -14,7 +14,7 @@ const editController = require('./controllers/editController.js');
 const deleteController = require('./controllers/deleteController.js');
 const cartController = require('./controllers/cartController.js');
 const authController = require('./controllers/authController.js');
-const mypageController = require('./controllers/mypageController.js');
+const myProfileController = require('./controllers/myProfileController.js');
 const pageNotFound = require('./controllers/pageNotFound.js');
 const defaultTitle = require('./middlewares/defaultTitle.js');
 const { hasUser } = require('./middlewares/guards.js');  // if guest click this link //localhost:3000/create, will work guard
@@ -42,7 +42,7 @@ app.use('/catalog/edit', editController);
 app.use('/catalog/delete', deleteController);
 app.use('/cart', cartController);
 app.use('/auth', authController);
-app.use('/my-page', mypageController);
+app.use('/my-profile', myProfileController);
 
 app.all('*', pageNotFound);
 
